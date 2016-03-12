@@ -19,7 +19,7 @@
   <script src="js/clipboard.min.js"></script>
   <script type="text/javascript">
     var clipboard = new Clipboard('.link', {
-        text: function() {
+        text: function(trigger) {
             // tooltip animation
             trigger.classList.add('copied');
             setTimeout(function() {
