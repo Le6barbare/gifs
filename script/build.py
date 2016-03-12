@@ -14,4 +14,4 @@ with open('__includes/site-index.html', 'w') as OpenFile:
         for File in ListFile:
             OpenFile.write('<li><a href="./'+Path+Dir+'/'+File+'" class="gif">'+File+'</a></li>')
         OpenFile.write('</ul></li>')
-    OpenFile.write('</ul></div>')
+    OpenFile.write('</ul>')
