@@ -9,7 +9,7 @@ $navy_bg:             #1D1F20;
 $navy_bg_light:       lighten(#1D1F20, 10);
 $blue_text_drk:       #6784a2;
 $blue_text:           #66adfb;
-$blue_text_lht:       #97afc8;
+$blue_text_lht:       desaturate(#97afc8,100);
 $blue_light:          #d2dae3;
 $green:               #00bd9c;
 $red:                 #C02841;
@@ -209,6 +209,18 @@ body{
 span.link {
     padding: 8px 10px;
     cursor: pointer;
-    font-size: 1.2em;
+}
+
+.icon-link:before {
+    content: '🔗';
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1.2em;
+    text-align: center;
+ 
+    font-variant: normal;
+    text-transform: none;
+
+    line-height: 1em;
 }
 //  @end main styles
