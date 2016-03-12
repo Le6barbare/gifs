@@ -21,6 +21,9 @@
     var clipboard = new Clipboard('.link', {
         text: function() {
             return document.getElementById("preview").getAttribute('src');
+            // tooltip animation
+            t.classList.add('copied');
+            setTimeout(function() { t.classList.remove('copied'); }, 1500);
         }
     });
     

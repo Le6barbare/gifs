@@ -189,7 +189,7 @@ body{
             text-decoration: none;
             display: inline-block;
             padding: 8px 10px;
-            width: 92%;
+            width: 90%;
             cursor: default;
           }
 
@@ -206,12 +206,11 @@ body{
   }
 }
 
-span.link {
+.link {
     padding: 8px 10px;
     cursor: pointer;
 }
-
-.icon-link:before {
+.link:before {
     content: '🔗';
     display: inline-block;
     text-decoration: inherit;
@@ -222,5 +221,35 @@ span.link {
     text-transform: none;
 
     line-height: 1em;
+}
+
+.copied::after {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  display: block;
+  content: "copied";
+  font-size: 0.9em;
+  padding: 2px 3px;
+  color: $blue_text_lht;
+  background-color: $blue_text_drk;
+  border-radius: 3px;
+  opacity: 0;
+  will-change: opacity, transform;
+  animation: showcopied 1.5s ease;
+}
+
+@keyframes showcopied {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 //  @end main styles
