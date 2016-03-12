@@ -184,7 +184,7 @@ body{
           margin: 0 0 5px 0;
 
           // Style individual gif links
-          span {
+          a {
             color: $blue_text_lht;
             text-decoration: none;
             display: block;
@@ -194,7 +194,7 @@ body{
           &:hover {
             background-color: lighten(#35393B, 10);
 
-            span {
+            a {
               color: $blue_light;
             }
           }

@@ -15,7 +15,7 @@ with open('../_includes/site-index.html', 'w') as OpenFile:
             ListFile = os.listdir("../"+Path+Dir)
             for File in ListFile:
                 Link=str(Path+Dir+'/'+File)
-                OpenFile.write('<li><span href="'+Link+'" class="gif" data-clipboard-text="'+Link+'">'+File+'</span></li>')
+                OpenFile.write('<li><a href="'+Link+'" class="gif" data-clipboard-text="'+Link+'">'+File+'</a></li>')
                 StaticFile.write('- path: '+Link+'\n')
                 StaticFile.write('  modified_time: '+str(int(os.path.getmtime("../"+Link)))+'\n')
                 StaticFile.write('  extname: "'+os.path.splitext(File)[1]+'"\n')

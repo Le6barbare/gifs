@@ -16,7 +16,10 @@
   {% include site-index.html %}
   </div>
 
+  <script src="dist/clipboard.min.js"></script>
   <script type="text/javascript">
+    new Clipboard('.gif');
+    
     var preview = document.getElementById("preview"),
         previewWrapper = document.getElementById('previewWrapper');
 
