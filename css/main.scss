@@ -7,10 +7,10 @@
 
 $navy_bg:             #1D1F20;
 $navy_bg_light:       lighten(#1D1F20, 10);
-$blue_text_drk:       desaturate(#6784a2, 100);
-$blue_text:           desaturate(#66adfb, 100);
-$blue_text_lht:       desaturate(#97afc8, 100);
-$blue_light:          desaturate(#d2dae3, 100);
+$blue_text_drk:       #6784a2;
+$blue_text:           #66adfb;
+$blue_text_lht:       #97afc8;
+$blue_light:          #d2dae3;
 $green:               #00bd9c;
 $red:                 #C02841;
 $yellow:              #f8f65e;
@@ -187,8 +187,10 @@ body{
           a {
             color: $blue_text_lht;
             text-decoration: none;
-            display: block;
+            display: inline-block;
             padding: 8px 10px;
+            width: 92%;
+            cursor: default;
           }
 
           &:hover {
@@ -202,5 +204,11 @@ body{
       }
     }
   }
+}
+
+span.link {
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 1.2em;
 }
 //  @end main styles

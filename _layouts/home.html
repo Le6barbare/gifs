@@ -18,7 +18,11 @@
 
   <script src="js/clipboard.min.js"></script>
   <script type="text/javascript">
-    new Clipboard('.gif');
+    var clipboard = new Clipboard('.link', {
+        text: function() {
+            return document.getElementById("preview").getAttribute('src');
+        }
+    });
     
     var preview = document.getElementById("preview"),
         previewWrapper = document.getElementById('previewWrapper');
