@@ -115,13 +115,13 @@ body{
   }
 
   a {
-    color: $red;
+    color: $blue_text;
     font-weight: bold; }
 }
 
 .gif-listing {
   margin-left: $header-width;
-  padding: 20px;
+  padding: 0 20px;
   overflow: hidden;
 
   @media (max-width: 600px) { margin-left: 0; }
@@ -153,16 +153,16 @@ body{
     // Style individual category cards
     > li {
       background-color: $navy_bg;
-      border-radius: 10px;
+    //   border-radius: 10px;
       padding: 6px 10px;
-      margin: 0 0 20px 0;
+    //   margin: 0 0 20px 0;
       text-transform: capitalize;
       font-size: 24px;
       //  experimental column support
       -moz-column-break-inside: avoid;
       -webkit-column-break-inside: avoid;
       column-break-inside: avoid;
-      color: $red;
+      color: $blue_text;
 
       // Style the sub-list of gifs
       > ul {
@@ -184,7 +184,7 @@ body{
           margin: 0 0 5px 0;
 
           // Style individual gif links
-          a {
+          span {
             color: $blue_text_lht;
             text-decoration: none;
             display: block;
@@ -194,7 +194,7 @@ body{
           &:hover {
             background-color: lighten(#35393B, 10);
 
-            a {
+            span {
               color: $blue_light;
             }
           }

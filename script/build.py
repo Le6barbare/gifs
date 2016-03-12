@@ -4,19 +4,20 @@ import os
 
 Path="img/"
 
-ListDirectory = os.listdir(Path)
+ListDirectory = os.listdir("../"+Path)
 
-with open('__includes/site-index.html', 'w') as OpenFile:
-    with open('__data/static_files.yml', 'w') as StaticFile:
+with open('../_includes/site-index.html', 'w') as OpenFile:
+    with open('../_data/static_files.yml', 'w') as StaticFile:
         OpenFile.write('<ul>')
         StaticFile.write('---\n')
         for Dir in ListDirectory:
             OpenFile.write('<li>'+Dir+'<ul>')
-            ListFile = os.listdir(Path+Dir)
+            ListFile = os.listdir("../"+Path+Dir)
             for File in ListFile:
-                OpenFile.write('<li><a href="./'+Path+Dir+'/'+File+'" class="gif">'+File+'</a></li>')
-                StaticFile.write('- path: '+Path+Dir+'/'+File+'\n')
-                StaticFile.write('  modified_time: 1430463202\n')
+                Link=str(Path+Dir+'/'+File)
+                OpenFile.write('<li><span href="'+Link+'" class="gif" data-clipboard-text="'+Link+'">'+File+'</span></li>')
+                StaticFile.write('- path: '+Link+'\n')
+                StaticFile.write('  modified_time: '+str(int(os.path.getmtime("../"+Link)))+'\n')
                 StaticFile.write('  extname: "'+os.path.splitext(File)[1]+'"\n')
             OpenFile.write('</ul></li>')
         OpenFile.write('</ul>')
