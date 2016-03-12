@@ -19,11 +19,11 @@
   <script src="js/clipboard.min.js"></script>
   <script type="text/javascript">
     var clipboard = new Clipboard('.link', {
-        text: function(trigger) {
+        text: function() {
             // tooltip animation
-            trigger.classList.add('copied');
+            document.getElementById("previewWrapper").classList.add('copied');
             setTimeout(function() {
-                trigger.classList.remove('copied');
+                document.getElementById("previewWrapper").classList.remove('copied');
             }, 1500);
             return document.getElementById("preview").getAttribute('src');
         }
