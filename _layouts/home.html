@@ -20,10 +20,12 @@
   <script type="text/javascript">
     var clipboard = new Clipboard('.link', {
         text: function() {
-            return document.getElementById("preview").getAttribute('src');
             // tooltip animation
-            t.classList.add('copied');
-            setTimeout(function() { t.classList.remove('copied'); }, 1500);
+            trigger.classList.add('copied');
+            setTimeout(function() {
+                trigger.classList.remove('copied');
+            }, 1500);
+            return document.getElementById("preview").getAttribute('src');
         }
     });
     
